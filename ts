@@ -227,11 +227,11 @@ BEGIN {
 END {
 	# Other files/directories
 	SIZE=TOTAL-SIZE_SUM
+	PART=SIZE/TOTAL*100
 	if ( UNIT == "G" )
 		SIZE=SIZE/1024/1024
 	if ( UNIT == "M" )
 		SIZE=SIZE/1024
-	PART=SIZE/TOTAL*100
 	NUMBER=NUMBER+1
 	printf("%3d  %-38s    %10.3f  %5.2f\n", NUMBER, "Other", SIZE, PART)
 	# name of pie
